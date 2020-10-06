@@ -3,9 +3,9 @@ name: CI
 on: [push]
 
 jobs:
-  release:
+  deploy-website:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' && github.repository == 'openupm/openupm-website-cn'
+    if: github.ref == 'refs/heads/main' && github.repository == 'openupm/openupm-website-cn'
     steps:
     - name: deploy website
       uses: maddox/actions/ssh@master
